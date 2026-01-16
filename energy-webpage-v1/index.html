@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Australian TV Energy Consumption</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="logo" onclick="navigate('home')">
+      <img src="images/PowerIcon.png" alt="Power Logo">
+      <span>Energy TV</span>
+    </div>
+
+    <ul>
+      <li id="nav-home" class="active" onclick="navigate('home')">Home</li>
+      <li id="nav-tv" onclick="navigate('tv')">Televisions</li>
+      <li id="nav-about" onclick="navigate('about')">About Us</li>
+    </ul>
+  </nav>
+
+  <!-- Main content -->
+  <main>
+
+    <!-- Home -->
+    <section id="home">
+      <div class="card">
+        <h1>Australian TV Energy Consumption</h1>
+        <p>
+          This website explores the energy consumption of televisions
+          currently available on the Australian market.
+        </p>
+        <p>
+          It is designed to support interactive data visualisations
+          developed for COS30045 – Data Visualisation.
+        </p>
+      </div>
+    </section>
+
+    <!-- Televisions -->
+    <section id="tv" style="display:none">
+      <div class="card">
+        <h2>Television Market Overview</h2>
+        <p>
+          This section will display interactive visualisations showing
+          screen technologies, energy usage, and efficiency ratings
+          of televisions sold in Australia.
+        </p>
+        <p class="placeholder">
+          Visualisations will be added in later exercises.
+        </p>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" style="display:none">
+      <div class="card">
+        <h2>About This Project</h2>
+        <p>
+          This website was developed as part of the unit
+          <strong>COS30045 – Data Visualisation</strong>
+          at Swinburne University of Technology.
+        </p>
+        <p>
+          The aim of this project is to communicate energy efficiency
+          information using effective visual design and interaction.
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>
+      © 2026 Chanh Nguyen |
+      COS30045 Data Visualisation |
+      GenAI tools were used to assist with code generation.
+    </p>
+  </footer>
+
+  <script src="js/scripts.js"></script>
+</body>
+</html>
