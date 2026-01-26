@@ -1,6 +1,6 @@
 :root {
-  --primary: #0057b8;
-  --secondary: #00a8e8;
+  --primary: #8b7355;
+  --secondary: #f4a460;
   --dark: #1f2933;
   --light: #f5f7fa;
   --accent: #fbbf24;
@@ -70,7 +70,7 @@ main {
   background: white;
   border-radius: 12px;
   padding: 1.5rem 2rem;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
   margin-bottom: 2rem;
   transition: transform 0.3s ease;
 }
@@ -90,7 +90,7 @@ h1, h2 {
 
 /* Footer */
 footer {
-  background: var(--dark);
+  background: #8b7355;
   color: white;
   text-align: center;
   padding: 1rem;
