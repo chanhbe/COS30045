@@ -1,0 +1,344 @@
+/* Import font chữ hiện đại */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap');
+
+:root {
+  --primary-gold: #f5a623;   /* Màu tia sét */
+  --dark-bronze: #4b4128;    /* Màu viền logo đậm */
+  --soft-gold: #f9e8a8;      /* Màu nền logo */
+  --bg-light: #faf9f4;       /* Màu nền trang web */
+  --card-white: #ffffff;
+  --text-main: #3d3522;
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  background-color: var(--bg-light);
+  color: var(--text-main);
+  line-height: 1.7;
+}
+
+/* --- Navigation --- */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  padding: 0.8rem 8%;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 2px solid var(--soft-gold);
+  box-shadow: 0 4px 20px rgba(124, 110, 74, 0.1);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: var(--dark-bronze);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.logo img {
+  height: 42px;
+  transition: var(--transition);
+}
+
+.logo:hover img {
+  transform: rotate(10deg) scale(1.1);
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 2.5rem;
+}
+
+.navbar li {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--dark-bronze);
+  cursor: pointer;
+  position: relative;
+  transition: var(--transition);
+}
+
+.navbar li:hover, .navbar .active {
+  color: var(--primary-gold);
+}
+
+.navbar li::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--primary-gold);
+  transition: var(--transition);
+}
+
+.navbar li:hover::after, .navbar .active::after {
+  width: 100%;
+}
+
+/* --- Hero Section --- */
+.hero {
+  background: linear-gradient(135deg, var(--dark-bronze) 0%, #2a2416 100%);
+  color: white;
+  text-align: center;
+  padding: 5rem 2rem;
+  border-radius: 24px !important;
+  margin-top: 2rem;
+  border: none !important;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2) !important;
+}
+
+.hero h1 {
+  background: linear-gradient(to right, #fff, var(--soft-gold));
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  font-weight: 800;
+  color: var(--dark-bronze);
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: var(--dark-bronze);
+  opacity: 0.9;
+  max-width: 800px;
+  margin: 0 auto;
+  font-weight: 300;
+}
+
+/* --- Layout chính --- */
+main {
+  max-width: 1100px;
+  margin: auto;
+  padding: 2rem 1.5rem;
+}
+
+/* --- Card UI --- */
+.card {
+  background: var(--card-white);
+  border-radius: 20px;
+  padding: 2.5rem;
+  margin-bottom: 2.5rem;
+  border: 1px solid rgba(124, 110, 74, 0.15);
+  box-shadow: 0 10px 30px rgba(124, 110, 74, 0.05);
+  transition: var(--transition);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(124, 110, 74, 0.1);
+  border-color: var(--soft-gold);
+}
+
+.highlight {
+  background: var(--soft-gold);
+  border: none;
+  border-left: 8px solid var(--primary-gold);
+}
+
+.highlight strong {
+  color: var(--dark-bronze);
+  font-size: 1.1rem;
+}
+
+h2, h3 {
+  color: var(--dark-bronze);
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+}
+
+/* --- Nội dung phân tích --- */
+.chart {
+  width: 100%;
+  border-radius: 15px;
+  margin: 2rem 0;
+  border: 4px solid var(--bg-light);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.insight {
+  background: #fffdf5;
+  padding: 1.5rem;
+  border-radius: 12px;
+  font-style: italic;
+  border-right: 4px solid var(--soft-gold);
+  color: #5d533a;
+  margin: 1.5rem 0;
+}
+
+.so-what {
+  background: #f1f0ea;
+  padding: 1.5rem;
+  border-radius: 12px;
+  border-left: 4px solid var(--dark-bronze);
+}
+
+.takeaway {
+  background: var(--dark-bronze);
+  color: white;
+}
+
+.takeaway h3 {
+  color: var(--primary-gold);
+}
+
+.note {
+  font-size: 0.9rem;
+  background: var(--bg-light);
+  padding: 10px 15px;
+  border-radius: 8px;
+  display: inline-block;
+}
+
+/* --- Footer --- */
+footer {
+  background: var(--dark-bronze);
+  color: var(--soft-gold);
+  text-align: center;
+  padding: 4rem 1rem;
+  margin-top: 5rem;
+}
+
+footer p {
+  opacity: 0.8;
+  font-size: 0.9rem;
+  max-width: 600px;
+  margin: auto;
+}
+
+/* Hiệu ứng mượt cho danh sách câu hỏi */
+.story-questions li {
+  list-style: none;
+  padding: 15px 0;
+  border-bottom: 1px dashed var(--soft-gold);
+}
+
+.story-questions li strong {
+  color: var(--primary-gold);
+  display: block;
+  margin-bottom: 5px;
+}
+
+/* --- Feature Boxes Styling --- */
+.feature-box {
+  background: #fffdf5;
+  border: 1px solid var(--soft-gold);
+  border-radius: 15px;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.feature-box h4 {
+  color: var(--dark-bronze);
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Q1: Grid Layout */
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.feature-item {
+  font-size: 0.9rem;
+  padding-left: 15px;
+  border-left: 3px solid var(--primary-gold);
+}
+
+.feature-item strong {
+  display: block;
+  color: var(--dark-bronze);
+  margin-bottom: 4px;
+}
+
+/* Q2: Size Tags Styling */
+.size-specs {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.size-tag {
+  padding: 12px 20px;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  transition: var(--transition);
+}
+
+.size-tag.gold {
+  background: var(--primary-gold);
+  color: white;
+}
+
+.size-tag.bronze {
+  background: var(--dark-bronze);
+  color: var(--soft-gold);
+}
+
+.size-tag.light {
+  background: var(--soft-gold);
+  color: var(--dark-bronze);
+}
+
+.size-tag:hover {
+  transform: scale(1.02);
+  filter: brightness(1.1);
+}
+
+/* Thêm vào cuối file styles.css */
+
+.feature-item {
+  position: relative;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid rgba(124, 110, 74, 0.1);
+  box-shadow: 2px 2px 10px rgba(0,0,0,0.02);
+}
+
+.feature-item strong {
+  font-size: 1rem;
+  color: var(--dark-bronze); /* Sử dụng màu nâu đồng từ logo */
+  margin-bottom: 8px;
+  border-bottom: 2px solid var(--soft-gold); /* Gạch chân nhẹ bằng màu vàng */
+  display: inline-block;
+}
+
+/* Thiết lập ban đầu cho các section để chuyển cảnh mượt */
+section {
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+/* Hiệu ứng Reveal cho các Card khi cuộn trang */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}

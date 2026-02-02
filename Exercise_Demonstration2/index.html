@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Australian TV Energy Consumption</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="logo" onclick="navigate('home')">
+      <img src="images/PowerIcon.png" alt="Power Logo">
+      <span>Energy TV</span>
+    </div>
+
+    <ul>
+      <li id="nav-home" class="active" onclick="navigate('home')">Home</li>
+      <li id="nav-tv" onclick="navigate('tv')">Televisions</li>
+      <li id="nav-about" onclick="navigate('about')">About Us</li>
+    </ul>
+  </nav>
+
+  <!-- Main content -->
+  <main>
+
+  <!-- ================= HOME ================= -->
+<section id="home">
+    <div class="card hero">
+      <h1>The Australian TV Landscape: Trends & Insights</h1>
+      <p class="subtitle">
+        Exploring the evolution of television technology, consumer preferences in screen sizes, 
+        and the brand diversity available in the modern Australian market.
+      </p>
+    </div>
+
+    <div class="card highlight">
+      <p>
+        <strong>Market Overview:</strong> The Australian television market is rapidly evolving. 
+        By analyzing government energy rating data, we can uncover significant patterns in 
+        how manufacturers and consumers are shaping the future of home entertainment.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>Why This Matters</h2>
+      <p>
+        Understanding market trends is the first step in recognizing how television choices 
+        impact our homes. From the tech behind the glass to the size of the frame, every 
+        trend tells a story about what Australians value in their viewing experience.
+      </p>
+      <p>
+        This website uses real data from the Australian Government TV energy
+        rating dataset to provide a clear, data-driven look at technology availability, 
+        size dominance, and brand concentration.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>The Questions We Explore</h2>
+      <ul class="story-questions">
+        <li>
+          <strong>What screen technologies are most common in televisions
+          currently available in Australia?</strong>
+        </li>
+        <li>
+          <strong>Which screen sizes dominate the market, and what does
+          this suggest about consumer preferences and energy use?</strong>
+        </li>
+        <li>
+          <strong>Which brands offer the widest range of TV models,
+          and how concentrated is the market?</strong>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+
+  <!-- ================= TELEVISIONS ================= -->
+  <section id="tv" style="display:none">
+
+    <!-- INTRO -->
+    <div class="card">
+      <h2>Decoding the Australian Television Market</h2>
+      <p>
+        The Australian television market is more than just a collection of products; 
+      it is a reflection of evolving technology and changing consumer lifestyles. 
+      To understand the impact of these devices, we must first look at the 
+      <strong>composition of the market itself</strong>.
+      </p>
+      <p>
+        This section dives into the data-driven trends of 
+      <strong>technology adoption, screen size preferences, and brand competition</strong>. 
+      By analyzing these three pillars, we can see how the industry is moving 
+      and what options are truly available to the Australian public today.
+      </p>
+      <p class="note">
+        All visualisations were produced after cleaning, grouping, and aggregating
+        the dataset using the <strong>KNIME Analytics Platform</strong>.
+      </p>
+    </div>
+
+    <!-- QUESTION 1 -->
+    <div class="card">
+      <h3>Question 1: What Screen Technologies Dominate the Market?</h3>
+
+      <p>
+        Screen technology determines how efficiently a television converts
+        electricity into light. As a result, different display technologies
+        can have noticeably different energy consumption profiles.
+      </p>
+
+      <p>
+        Understanding which technologies dominate the Australian market helps
+        explain why certain energy consumption patterns are more prevalent
+        than others.
+      </p>
+
+      <img
+        src="images/screen_tech.png"
+        alt="Distribution of TV screen technologies"
+        class="chart"
+      />
+
+      <p class="insight">
+        The visualisation shows that LCD-based technologies overwhelmingly
+        dominate the Australian television market. OLED televisions, while still
+        representing a smaller share, are increasingly available, reflecting
+        growing consumer interest in premium image quality. Plasma televisions
+        appear only rarely, suggesting that this technology has effectively
+        disappeared from modern retail offerings.
+      </p>
+
+      <div class="feature-box">
+        <h4><i class="icon">✨</i> Why OLED is the Premium Choice</h4>
+        <div class="feature-grid">
+          <div class="feature-item">
+            <strong>Perfect Blacks:</strong> Unlike LCDs, OLED pixels emit their own light and can turn off completely, creating infinite contrast.
+          </div>
+          <div class="feature-item">
+            <strong>Ultra-Thin Design:</strong> Without the need for a bulky backlight unit, OLED TVs can be as thin as a few millimeters.
+          </div>
+          <div class="feature-item">
+            <strong>Superior Response:</strong> Perfect for gaming and sports due to near-instantaneous pixel response times.
+          </div>
+        </div>
+      </div>
+
+      <p class="so-what">
+        <strong>Why this matters:</strong> Because LCD televisions dominate the
+        market, even modest improvements in LCD energy efficiency could lead to
+        significant national energy savings. Conversely, as OLED adoption grows,
+        its higher average power usage may become more relevant in future
+        energy planning.
+      </p>
+    </div>
+
+    <!-- QUESTION 2 -->
+    <div class="card">
+      <h3>Question 2: Which Screen Sizes Are Most Common?</h3>
+
+      <p>
+        Screen size is one of the most visible factors influencing television
+        purchases. Larger screens generally require more power, particularly
+        during extended viewing sessions in the evening.
+      </p>
+
+      <p>
+        Analysing screen size distribution provides insight into consumer
+        preferences and their potential impact on household electricity demand.
+      </p>
+
+      <img
+        src="images/screen_size.png"
+        alt="Popularity of TV screen sizes in Australia"
+        class="chart"
+      />
+
+      <p class="insight">
+        The data indicates that large televisions, especially those above
+        60 inches, are widely available across the Australian market. Smaller
+        televisions are comparatively less common, suggesting a strong consumer
+        preference for immersive, cinema-like viewing experiences.
+      </p>
+
+      <div class="feature-box">
+        <h4><i class="icon">📏</i> Finding Your Perfect Fit: Size Advantages</h4>
+        <div class="size-specs">
+          <div class="size-tag gold">
+            <strong>70+ Inch:</strong> The Ultimate Home Cinema. Best for dedicated media rooms and large open-plan living areas.
+          </div>
+          <div class="size-tag bronze">
+            <strong>60-69 Inch:</strong> The Modern Standard. Offers high immersion for 4K movies while fitting comfortably in most living rooms.
+          </div>
+          <div class="size-tag light">
+            <strong>50-59 Inch:</strong> The Versatile Performer. Perfect balance of price and size for standard bedrooms or smaller apartments.
+          </div>
+        </div>
+      </div>
+
+      <p class="so-what">
+        <strong>Why this matters:</strong> At scale, widespread adoption of large
+        televisions can contribute to increased residential electricity demand,
+        particularly during peak evening hours. Even small increases in average
+        screen size can result in substantial cumulative energy consumption.
+      </p>
+    </div>
+
+    <!-- QUESTION 3 -->
+    <div class="card">
+      <h3>Question 3: Which Brands Offer the Most Television Models?</h3>
+
+      <p>
+        Brand dominance plays an important role in shaping consumer choice.
+        Brands that offer a wide range of models are more likely to influence
+        purchasing decisions across different budgets, screen sizes, and
+        energy ratings.
+      </p>
+
+      <p>
+        This analysis focuses on the number of television models offered by
+        each brand, revealing the structure of the Australian television market.
+      </p>
+
+      <img
+        src="images/tv_models_by_brand.png"
+        alt="Number of TV models by brand"
+        class="chart"
+      />
+
+      <p class="insight">
+        The chart shows that a small number of major brands dominate the market
+        by offering a large variety of television models. In contrast, many other
+        brands provide only a limited selection, resulting in a market that is
+        both competitive and highly concentrated.
+      </p>
+
+      <div class="feature-box">
+      <h4><i class="icon">🏆</i> Market Leader Strategies: Why it matters</h4>
+      <div class="feature-grid">
+        <div class="feature-item">
+          <strong>The Tech Giants (Samsung, LG):</strong> 
+          With over 600-1100 models, these brands invest heavily in R&D to offer a TV for every possible niche, from entry-level to luxury 8K.
+        </div>
+        <div class="feature-item">
+          <strong>The Value Disruptors (Kogan, Hisense):</strong> 
+          Focus on "price-to-performance." They offer high model variety to dominate the mid-range market with competitive pricing.
+        </div>
+        <div class="feature-item">
+          <strong>The Niche Players:</strong> 
+          Brands with fewer models often focus on specific segments, such as ultra-budget options or specialized high-end cinematic displays.
+        </div>
+      </div>
+    </div>
+
+      <p class="so-what">
+        <strong>Why this matters:</strong> Because a small number of brands account
+        for a large proportion of available models, their design decisions and
+        energy efficiency standards can have a disproportionate impact on overall
+        television energy consumption in Australia.
+      </p>
+    </div>
+
+    <!-- TAKEAWAY -->
+    <div class="card takeaway">
+      <h3>Overall Insight</h3>
+      <p>
+        Together, these visualisations reveal a television market characterised
+        by large screen sizes, widespread use of LCD-based technologies, and
+        dominance by a small number of major brands.
+      </p>
+      <p>
+        While individual purchasing decisions may seem minor, their combined
+        effect shapes national energy demand. By understanding these broader
+        patterns, consumers can make more informed choices that balance viewing
+        experience, cost, and long-term energy consumption.
+      </p>
+    </div>
+
+  </section>
+
+  <!-- ================= ABOUT ================= -->
+  <section id="about" style="display:none">
+    <div class="card">
+      <h2>About This Project</h2>
+      <p>
+        This website was developed as part of the unit
+        <strong>COS30045 – Data Visualisation</strong>
+        at Swinburne University of Technology.
+      </p>
+      <p>
+        The project focuses on communicating real-world data insights
+        using effective visualisation and storytelling techniques.
+      </p>
+    </div>
+  </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>
+      © 2026 Chanh Nguyen |
+      COS30045 Data Visualisation |
+      GenAI tools were used to assist with planning and code generation.
+    </p>
+  </footer>
+
+  <script src="js/scripts.js"></script>
+</body>
+</html>
