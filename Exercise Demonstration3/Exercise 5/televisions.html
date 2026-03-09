@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Televisions - Analysis</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+  <nav class="navbar">
+    <div class="logo">
+      <a href="index.html" style="text-decoration: none; display: flex; align-items: center; color: inherit;">
+        <img src="images/PowerIcon.png" alt="Power Logo">
+        <span>Energy TV</span>
+      </a>
+    </div>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li class="active"><a href="televisions.html">Televisions</a></li>
+      <li><a href="about.html">About Us</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section id="tv">
+
+    <!-- INTRO -->
+    <div class="card">
+      <h2>Decoding the Australian Television Market</h2>
+      <p>
+        The Australian television market is more than just a collection of products; 
+      it is a reflection of evolving technology and changing consumer lifestyles. 
+      To understand the impact of these devices, we must first look at the 
+      <strong>composition of the market itself</strong>.
+      </p>
+      <p>
+        This section dives into the data-driven trends of 
+      <strong>technology adoption, screen size preferences, and brand competition</strong>. 
+      By analyzing these three pillars, we can see how the industry is moving 
+      and what options are truly available to the Australian public today.
+      </p>
+      <p class="note">
+        All visualisations were produced after cleaning, grouping, and aggregating
+        the dataset using the <strong>KNIME Analytics Platform</strong>.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>Interactive Energy Visualisations</h2>
+      <p>
+        The following charts explore television energy consumption
+        using multiple D3 visualisation techniques.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>Scatter Plot — Energy vs Star Rating</h2>
+      <div id="scatter-plot" ></div>
+    </div>
+
+    <div class="card">
+      <h2>Donut Chart — Energy by Screen Technology</h2>
+      <div id="donut-chart" ></div>
+    </div>
+
+    <div class="card">
+      <h2>Bar Chart — 55 inch TVs</h2>
+      <div id="bar-chart" ></div>
+    </div>
+
+    <div class="card">
+      <h2>Line Chart — Electricity Spot Prices</h2>
+      <div id="line-chart" ></div>
+    </div>
+
+        <!-- TAKEAWAY -->
+    <div class="card takeaway">
+      <h3>Overall Insight</h3>
+      <p>
+        Together, these visualisations reveal a television market characterised
+        by large screen sizes, widespread use of LCD-based technologies, and
+        dominance by a small number of major brands.
+      </p>
+      <p>
+        While individual purchasing decisions may seem minor, their combined
+        effect shapes national energy demand. By understanding these broader
+        patterns, consumers can make more informed choices that balance viewing
+        experience, cost, and long-term energy consumption.
+      </p>
+    </div>
+
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>
+      © 2026 Chanh Nguyen |
+      COS30045 Data Visualisation |
+      GenAI tools were used to assist with planning and code generation.
+    </p>
+  </footer>
+
+
+
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+
+  <script src="js/scatter.js"></script>
+  <script src="js/donut.js"></script>
+  <script src="js/bar55.js"></script>
+  <script src="js/line.js"></script>
+  <!-- Navigation -->
+  <script src="js/scripts.js"></script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      console.log("Trang đã load xong, bắt đầu vẽ biểu đồ...");
+      // Gọi các hàm đã định nghĩa trong các file JS
+      if (typeof createScatterPlot === "function") createScatterPlot();
+      if (typeof createDonutChart === "function") createDonutChart();
+      if (typeof createBarChart === "function") createBarChart();
+      if (typeof createLineChart === "function") createLineChart();
+    });
+  </script>
+</body>
+</html>

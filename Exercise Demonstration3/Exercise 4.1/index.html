@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SVG House - Exercise 4.1</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: linear-gradient(to top, #87ceeb, #e0f7ff);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    h1 {
+      margin: 20px;
+      color: #333;
+    }
+
+    .canvas {
+      background: #bde0fe;
+      border: 2px solid #333;
+      border-radius: 10px;
+      margin-bottom: 30px;
+    }
+
+    .label {
+      font-size: 14px;
+      fill: #222;
+    }
+  </style>
+</head>
+
+<body>
+
+<h1>My SVG House and Garden</h1>
+
+<svg width="800" height="500" class="canvas">
+
+  <!-- Sky -->
+  <rect x="0" y="0" width="800" height="300" fill="#a2d2ff" />
+
+  <!-- Grass -->
+  <rect x="0" y="300" width="800" height="200" fill="#95d5b2" />
+
+  <!-- Sun -->
+  <circle cx="700" cy="80" r="40" fill="#ffd166" stroke="orange" stroke-width="3" />
+
+  <!-- House Base -->
+  <rect x="250" y="220" width="300" height="180" fill="#f4a261" stroke="#333" stroke-width="3"/>
+
+  <!-- Roof -->
+  <polygon points="230,220 400,120 570,220"
+           fill="#e63946"
+           stroke="#333"
+           stroke-width="3" />
+
+  <!-- Door -->
+  <rect x="370" y="290" width="60" height="110"
+        fill="#8d5524"
+        stroke="#333"
+        stroke-width="2"/>
+
+  <!-- Door Handle -->
+  <circle cx="420" cy="350" r="5" fill="gold" />
+
+  <!-- Windows Group -->
+  <g transform="translate(0,0)" stroke="#333" stroke-width="2">
+
+    <!-- Left Window -->
+    <rect x="280" y="260" width="60" height="60" fill="#caf0f8"/>
+    <line x1="280" y1="290" x2="340" y2="290" stroke="#333"/>
+    <line x1="310" y1="260" x2="310" y2="320" stroke="#333"/>
+
+    <!-- Right Window -->
+    <rect x="460" y="260" width="60" height="60" fill="#caf0f8"/>
+    <line x1="460" y1="290" x2="520" y2="290" stroke="#333"/>
+    <line x1="490" y1="260" x2="490" y2="320" stroke="#333"/>
+
+  </g>
+
+  <!-- Chimney -->
+  <rect x="470" y="150" width="40" height="70" fill="#6d4c41" />
+
+  <!-- Smoke using path -->
+  <path d="M490 140 
+           C480 120, 520 120, 500 100
+           C490 90, 530 90, 510 70"
+        fill="none"
+        stroke="#555"
+        stroke-width="3"/>
+
+  <!-- Tree -->
+  <rect x="120" y="260" width="25" height="100" fill="#8b5a2b"/>
+  <circle cx="132" cy="240" r="40" fill="#2a9d8f"/>
+  <circle cx="100" cy="260" r="30" fill="#2a9d8f"/>
+  <circle cx="160" cy="260" r="30" fill="#2a9d8f"/>
+
+  <!-- Path -->
+  <ellipse cx="400" cy="450" rx="120" ry="40" fill="#cdb4db" opacity="0.6"/>
+
+  <!-- Fence -->
+  <g stroke="#6c757d" stroke-width="4">
+    <line x1="50" y1="330" x2="200" y2="330"/>
+    <line x1="50" y1="360" x2="200" y2="360"/>
+    <line x1="60" y1="310" x2="60" y2="380"/>
+    <line x1="90" y1="310" x2="90" y2="380"/>
+    <line x1="120" y1="310" x2="120" y2="380"/>
+    <line x1="150" y1="310" x2="150" y2="380"/>
+    <line x1="180" y1="310" x2="180" y2="380"/>
+  </g>
+
+  <!-- Text -->
+  <text x="300" y="460" font-size="24" fill="#333">
+    Welcome Home 🌿
+  </text>
+
+</svg>
+
+</body>
+</html>
